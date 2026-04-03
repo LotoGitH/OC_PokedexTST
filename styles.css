@@ -9,8 +9,8 @@
 html, body {
   height: 100%;
   margin: 0;
-  background: #1a1a2e;
-  color: #eee;
+  background: #B0B0B0;
+  color: #1a1a1a;
   font-family: 'Segoe UI', system-ui, sans-serif;
 }
 
@@ -24,10 +24,10 @@ html, body {
 .pokedex-sidebar {
   width: 300px;
   min-width: 240px;
-  background: #16213e;
+  background: #CC1033;
   display: flex;
   flex-direction: column;
-  border-right: 2px solid #0f3460;
+  border-right: 4px solid #8B0A1A;
   overflow: hidden;
 }
 
@@ -41,7 +41,7 @@ html, body {
   flex: 1;
   overflow-y: auto;
   padding: 24px;
-  background: #1a1a2e;
+  background: #D0D0D0;
 }
 
 /* ── Pokémon list items ───────────────────────────────────── */
@@ -59,17 +59,17 @@ html, body {
 
 .poke-item:hover,
 .poke-item:focus {
-  background: #0f3460;
+  background: #9B0C26;
 }
 
 .poke-item.is-active {
-  background: #0f3460;
-  border-left-color: #e94560;
+  background: #8B0A1A;
+  border-left-color: #5BC8F5;
 }
 
 .poke-item .poke-number {
   font-size: 0.72rem;
-  color: #888;
+  color: #f8c8c8;
   min-width: 28px;
   text-align: right;
 }
@@ -85,19 +85,19 @@ html, body {
   font-size: 0.9rem;
   font-weight: 500;
   text-transform: capitalize;
-  color: #ddd;
+  color: #fff;
 }
 
 /* ── Search bar ───────────────────────────────────────────── */
 .sidebar-search .input {
-  background: #0f3460;
-  border-color: #1a4a8a;
-  color: #eee;
+  background: #8B0A1A;
+  border-color: #6B0814;
+  color: #fff;
 }
-.sidebar-search .input::placeholder { color: #888; }
+.sidebar-search .input::placeholder { color: #f8c8c8; }
 .sidebar-search .input:focus {
-  border-color: #e94560;
-  box-shadow: 0 0 0 2px rgba(233,69,96,0.3);
+  border-color: #5BC8F5;
+  box-shadow: 0 0 0 2px rgba(91,200,245,0.4);
 }
 
 /* ── Loader spinner ───────────────────────────────────────── */
@@ -105,8 +105,8 @@ html, body {
   display: inline-block;
   width: 36px;
   height: 36px;
-  border: 4px solid rgba(255,255,255,0.15);
-  border-top-color: #e94560;
+  border: 4px solid rgba(204,16,51,0.2);
+  border-top-color: #CC1033;
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
   margin: 0 auto;
@@ -115,12 +115,13 @@ html, body {
 
 /* ── Detail panel ─────────────────────────────────────────── */
 .detail-card {
-  background: #16213e;
+  background: #F0F0F0;
   border-radius: 12px;
   padding: 28px;
   max-width: 720px;
   margin: 0 auto;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  border: 2px solid #B0B0B0;
 }
 
 .detail-header {
@@ -143,12 +144,12 @@ html, body {
   font-size: 2rem;
   font-weight: 700;
   text-transform: capitalize;
-  color: #fff;
+  color: #1a1a1a;
 }
 
 .detail-number {
   font-size: 1rem;
-  color: #888;
+  color: #555;
   margin-bottom: 8px;
 }
 
@@ -191,10 +192,10 @@ html, body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #e94560;
+  color: #CC1033;
   margin-bottom: 8px;
   margin-top: 20px;
-  border-bottom: 1px solid #0f3460;
+  border-bottom: 2px solid #CC1033;
   padding-bottom: 4px;
 }
 
@@ -210,7 +211,7 @@ html, body {
 .stat-label {
   width: 100px;
   text-align: right;
-  color: #aaa;
+  color: #555;
   text-transform: capitalize;
   font-size: 0.78rem;
 }
@@ -219,13 +220,13 @@ html, body {
   width: 34px;
   text-align: right;
   font-weight: 600;
-  color: #eee;
+  color: #1a1a1a;
 }
 
 .stat-bar-bg {
   flex: 1;
   height: 8px;
-  background: #0f3460;
+  background: #C0C0C0;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -233,7 +234,7 @@ html, body {
 .stat-bar-fill {
   height: 100%;
   border-radius: 4px;
-  background: linear-gradient(90deg, #e94560, #f7b731);
+  background: linear-gradient(90deg, #CC1033, #E8294A);
   transition: width 0.5s ease;
 }
 
@@ -256,7 +257,7 @@ html, body {
   border-radius: 8px;
 }
 
-.evo-step:hover { transform: scale(1.08); background: #0f3460; }
+.evo-step:hover { transform: scale(1.08); background: #ddd; }
 
 .evo-step img {
   width: 64px;
@@ -267,18 +268,18 @@ html, body {
 .evo-step span {
   font-size: 0.72rem;
   text-transform: capitalize;
-  color: #ccc;
+  color: #444;
   margin-top: 4px;
 }
 
 .evo-arrow {
   font-size: 1.2rem;
-  color: #555;
+  color: #CC1033;
 }
 
 /* ── Description ──────────────────────────────────────────── */
 .poke-description {
-  color: #bbb;
+  color: #444;
   font-size: 0.9rem;
   line-height: 1.6;
   font-style: italic;
@@ -293,8 +294,8 @@ html, body {
 
 /* ── Navbar override ──────────────────────────────────────── */
 .navbar.is-dark {
-  background: #0f3460 !important;
-  border-bottom: 2px solid #e94560;
+  background: #8B0A1A !important;
+  border-bottom: 3px solid #5BC8F5;
 }
 
 /* ── Detail loader ────────────────────────────────────────── */
@@ -305,14 +306,14 @@ html, body {
   justify-content: center;
   min-height: 300px;
   gap: 14px;
-  color: #888;
+  color: #666;
 }
 
 /* ── Scrollbar styling ────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #16213e; }
-::-webkit-scrollbar-thumb { background: #0f3460; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #e94560; }
+::-webkit-scrollbar-track { background: #9B0C26; }
+::-webkit-scrollbar-thumb { background: #6B0814; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #5BC8F5; }
 
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 768px) {
@@ -325,7 +326,7 @@ html, body {
     width: 100%;
     height: 240px;
     border-right: none;
-    border-bottom: 2px solid #0f3460;
+    border-bottom: 4px solid #8B0A1A;
   }
 
   .pokemon-detail {
