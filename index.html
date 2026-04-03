@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex</title>
+  <!-- Bulma CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── Navbar ──────────────────────────────────────────── -->
+  <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <span class="navbar-item has-text-weight-bold is-size-5">
+        📕 Pokédex — Kanto Edition
+      </span>
+    </div>
+  </nav>
+
+  <!-- ── Main Layout ─────────────────────────────────────── -->
+  <div class="pokedex-layout">
+
+    <!-- Left column: list + search -->
+    <aside class="pokedex-sidebar">
+      <div class="sidebar-search px-3 pt-3 pb-2">
+        <div class="field">
+          <div class="control has-icons-left">
+            <input
+              class="input"
+              type="text"
+              id="search-input"
+              placeholder="Search Pokémon…"
+              aria-label="Search Pokémon"
+            />
+            <span class="icon is-small is-left">🔍</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="pokemon-list" class="pokemon-list" role="listbox" aria-label="Pokémon list">
+        <!-- Populated by JS -->
+        <div class="list-loader has-text-centered py-5">
+          <div class="loader-spinner"></div>
+          <p class="mt-2 has-text-grey">Loading Pokémon…</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right column: detail -->
+    <main id="pokemon-detail" class="pokemon-detail" aria-live="polite">
+      <div class="has-text-centered py-6 has-text-grey">
+        <p class="is-size-3">👈 Select a Pokémon</p>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
